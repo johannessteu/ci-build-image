@@ -1,12 +1,12 @@
-FROM ubuntu:16.04
+FROM ubuntu:14.04
 
 MAINTAINER Johannes Steu hello@johannessteu.de
 
 RUN apt-get update
-RUN apt-get install -y wget openssl php git ssh curl unzip sudo npm nodejs build-essential libssl-dev
+RUN apt-get install -y wget openssl php5 git ssh curl unzip sudo build-essential libssl-dev
 
-RUN curl -sL https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh -o install_nvm.sh
-RUN bash install_nvm.sh
+RUN curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
+RUN sudo apt-get install -y nodejs
 
 RUN curl -sSL https://get.docker.com/ | sh
 
