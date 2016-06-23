@@ -2,8 +2,12 @@ FROM ubuntu:16.04
 
 MAINTAINER Johannes Steu hello@johannessteu.de
 
+
 RUN apt-get update
-RUN apt-get install -y nodejs npm wget openssl php git ssh curl unzip
+RUN apt-get install -y wget openssl php git ssh curl unzip sudo
+
+RUN curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+RUN apt-get install -y nodejs
 
 RUN curl -sSL https://get.docker.com/ | sh
 
