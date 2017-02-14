@@ -9,7 +9,6 @@ RUN sudo LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/php
 
 RUN apt-get update
 RUN apt-get install -y wget openssl php7.0 git ssh curl unzip sudo build-essential libssl-dev
-RUN apt-get install -y php7.0-mbstring php7.0-zip php7.0-xml
 
 RUN curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
 RUN sudo apt-get install -y nodejs
